@@ -618,7 +618,7 @@ footer .mark{width:44px;color:#666}
     <div class="stat rv"><b data-to="8">0</b><span>проектов в экосистеме</span></div>
     <div class="stat rv" style="--d:.08s"><b data-to="100" data-suf="K">0</b><span>гостей в месяц</span></div>
     <div class="stat rv" style="--d:.16s"><b data-to="300" data-suf="K">0</b><span>гостей в единой системе лояльности</span></div>
-    <div class="stat rv" style="--d:.24s"><b><span class="u0" data-ru="~" data-en="~"></span><span data-to="1">0</span><span class="u" data-ru=" млрд" data-en="B"></span></b><span>охват в год (OTS): соцсети, пресса, кампании фестивалей</span></div>
+    <div class="stat rv" style="--d:.24s"><b><span class="u0" data-ru="~" data-en="~"></span><span data-to="1000" data-div="1000">0</span><span class="u" data-ru=" млрд" data-en="B"></span></b><span>охват в год (OTS): соцсети, пресса, кампании фестивалей</span></div>
   </div></div>
 </div>
 
@@ -1256,8 +1256,12 @@ function applyStatic(){
 function fmt(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g," ");}
 function count(el){
   var to=+el.dataset.to,suf=el.dataset.suf||"",t0=null,dur=1800;
-  if(RM){el.textContent=fmt(to)+suf;return;}
-  function s(t){if(!t0)t0=t;var p=Math.min((t-t0)/dur,1),e=1-Math.pow(1-p,4);el.textContent=fmt(Math.round(to*e))+suf;if(p<1)requestAnimationFrame(s);}
+  if(RM){el.textContent=(+el.dataset.div?String(to/el.dataset.div):fmt(to))+suf;return;}
+  var dv=+el.dataset.div||0;
+  function s(t){if(!t0)t0=t;var p=Math.min((t-t0)/dur,1),e=1-Math.pow(1-p,4);
+    if(dv){var v=to*e/dv;el.textContent=(p<1&&v<to/dv-.005?v.toFixed(2):String(to/dv)).replace(".",lang==="ru"?",":".")+suf;}
+    else el.textContent=fmt(Math.round(to*e))+suf;
+    if(p<1)requestAnimationFrame(s);}
   requestAnimationFrame(s);
 }
 var io=new IntersectionObserver(function(es){es.forEach(function(e){
