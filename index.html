@@ -577,6 +577,23 @@ footer .mark{width:44px;color:#666}
 .pnext:hover{border-color:#fff;transform:translateY(-2px)}
 .pnext:hover span{transform:translateX(4px)}
 @media(max-width:560px){.pnext{padding-left:18px;gap:10px}.pnext b{font-size:16px}.pprev{width:52px;height:52px}.pnext{height:52px}.pnext span{width:36px;height:36px}.ptab{padding:8px 13px;font-size:13px}}
+
+/* private events */
+.prent{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-top:22px;padding:15px 18px;border:1px solid var(--line2);border-left:2px solid var(--ac);border-radius:14px;transition:.3s var(--ease)}
+.prent span{color:var(--ink2);font-size:14px}
+.prent b{color:var(--act);font-size:13px;font-weight:500;white-space:nowrap}
+.prent:hover{background:var(--card2);transform:translateY(-2px)}
+.rent .lead{text-align:left;margin:20px 0 0}
+.rgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:44px}
+.rc{display:flex;flex-direction:column;justify-content:space-between;gap:36px;min-height:230px;padding:22px 18px;border:1px solid var(--line2);border-top:2px solid var(--c);border-radius:16px;text-decoration:none;color:var(--ink);background:var(--card);transition:.35s var(--ease)}
+.rc h4{font-size:clamp(22px,2vw,28px);font-weight:400;letter-spacing:-.02em;text-transform:uppercase;line-height:1.05}
+.rc p{color:var(--ink2);font-size:14px;margin-top:10px;line-height:1.35}
+.rc small{display:block;color:var(--soft);font-size:12px;letter-spacing:.06em;margin-top:6px}
+.rc .go{color:var(--ct);font-size:13px;letter-spacing:.04em}
+.rc:hover{background:var(--card2);border-color:var(--c);transform:translateY(-3px)}
+@media(max-width:1100px){.rgrid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.rgrid{grid-template-columns:1fr 1fr}.rc{min-height:190px}}
+@media(max-width:420px){.rgrid{grid-template-columns:1fr}}
 </style>
 <noscript><style>.rv{opacity:1!important;transform:none!important}.tile{opacity:1!important;translate:0 0!important}.mq{animation:none}</style></noscript>
 </head>
@@ -590,6 +607,7 @@ footer .mark{width:44px;color:#666}
       <a href="#eco">Экосистема</a>
       <a href="#projects">Проекты</a>
       <a href="#b2b">Для бизнеса</a>
+      <a href="#rent">Корпоративы</a>
       <a href="#team">Команда</a>
       <a class="cta" href="#contact">Связаться</a>
       <button class="lang" id="lang" type="button" aria-label="Language / Язык"><span data-l="ru">RU</span><span data-l="en">EN</span></button>
@@ -607,6 +625,7 @@ footer .mark{width:44px;color:#666}
     <div class="btns rv" style="--d:.4s">
       <a class="btn solid" href="#reel">▶ Смотреть шоурил</a>
       <a class="btn" href="#eco">Как устроена экосистема</a>
+      <a class="btn" href="#rent">Снять площадку под корпоратив</a>
     </div>
   </div>
   <div class="scrollhint"><span>листайте</span><i></i></div>
@@ -862,6 +881,22 @@ footer .mark{width:44px;color:#666}
       <div class="play" aria-hidden="true"><svg viewBox="0 0 104 90"><polygon points="26,0 78,0 104,45 78,90 26,90 0,45" fill="#fff"/></svg><i></i></div>
     </div>
     <div class="reelcap"><span>Вечеринки, фестивали и проекты p2p</span><a href="https://disk.yandex.ru/i/G2TYOqQc8PdsUg" target="_blank" rel="noopener">Смотреть в оригинале (1080p) ↗</a></div>
+  </div>
+</section>
+
+<!-- ============ PRIVATE EVENTS ============ -->
+<section class="sec rent" id="rent">
+  <div class="wrap">
+    <div class="eyebrow rv">Корпоративы и закрытые события</div>
+    <h2 class="h2 rv" style="--d:.08s">Снять пространство<br>под корпоратив или праздник</h2>
+    <p class="lead rv" style="--d:.15s">Пять площадок в центре города: кухня, бар и программа. Команда берёт организацию на себя. Выберите пространство и оставьте заявку на его сайте.</p>
+    <div class="rgrid">
+      <a class="rc rv" style="--c:#8389CD;--ct:#A9AEF0;--d:0.00s" href="https://rovesnik.bar" target="_blank" rel="noopener"><div><h4>Ровесник</h4><p>Бар-трансформер</p><small>м. Тверская</small></div><span class="go">Узнать подробности ↗</span></a>
+      <a class="rc rv" style="--c:#EC462F;--ct:#FF6A52;--d:0.06s" href="https://skrepkacafe.ru" target="_blank" rel="noopener"><div><h4>Skrepka</h4><p>Городское кафе</p><small>м. Китай-город</small></div><span class="go">Узнать подробности ↗</span></a>
+      <a class="rc rv" style="--c:#3D3D8C;--ct:#8D8DE8;--d:0.12s" href="https://dorozhka.com/" target="_blank" rel="noopener"><div><h4>Дорожка</h4><p>Боулинг-клуб</p><small>м. Белорусская</small></div><span class="go">Узнать подробности ↗</span></a>
+      <a class="rc rv" style="--c:#D9482B;--ct:#FF7A5C;--d:0.18s" href="https://nomerkaraoke.ru" target="_blank" rel="noopener"><div><h4>Nomer</h4><p>Караоке-дистиллерия</p><small>м. Китай-город</small></div><span class="go">Узнать подробности ↗</span></a>
+      <a class="rc rv" style="--c:#E0762F;--ct:#F59A55;--d:0.24s" href="https://peshka.club" target="_blank" rel="noopener"><div><h4>Пешка</h4><p>Шахматный клуб и бистро</p><small>м. Трубная</small></div><span class="go">Узнать подробности ↗</span></a>
+    </div>
   </div>
 </section>
 
@@ -1179,7 +1214,7 @@ var STAT={
 "стоимость":"price",
 "по запросу":"on request",
 "от 70 000 ₽":"from ₽70,000",
-"от 100 000 ₽":"from ₽100,000", "охват в год (OTS): соцсети, пресса, кампании фестивалей":"annual reach (OTS): social, press, festival campaigns",
+"от 100 000 ₽":"from ₽100,000", "Корпоративы и закрытые события":"Corporate & private events", "Корпоративы":"Private events", "Снять площадку под корпоратив":"Book a venue for your event", "Снять пространство<br>под корпоратив или праздник":"Book a venue<br>for your corporate or private event", "Пять площадок в центре города: кухня, бар и программа. Команда берёт организацию на себя. Выберите пространство и оставьте заявку на его сайте.":"Five venues in the city centre: kitchen, bar and a programme. Our team takes care of the organisation. Choose a space and send a request on its site.", "Бар-трансформер":"Transformer bar", "Городское кафе":"City café", "Боулинг-клуб":"Bowling club", "Караоке-дистиллерия":"Karaoke distillery", "Шахматный клуб и бистро":"Chess club & bistro", "м. Тверская":"Tverskaya metro", "м. Китай-город":"Kitay-gorod metro", "м. Белорусская":"Belorusskaya metro", "м. Трубная":"Trubnaya metro", "Узнать подробности ↗":"Learn more ↗", "охват в год (OTS): соцсети, пресса, кампании фестивалей":"annual reach (OTS): social, press, festival campaigns",
 "Сайт для корпоративов ↗":"Corporate events site ↗"
 };
 function nz(s){return s.replace(/&nbsp;| /g," ").replace(/&amp;/g,"&").replace(/\s+/g," ").trim();}
@@ -1395,6 +1430,7 @@ var LINKS={
  onwheels:["https://instagram.com/rovesnik.bar","https://t.me/rovesnikbar","https://t.me/RovesnikRobot"],
  fomoteka:["https://instagram.com/fomoteka","https://t.me/fomoteka"]
 };
+var RENT={rovesnik:"https://rovesnik.bar",skrepka:"https://skrepkacafe.ru",dorozhka:"https://dorozhka.com/",nomer:"https://nomerkaraoke.ru",peshka:"https://peshka.club"};
 var host=document.getElementById("projlist");
 var curSlide=0;
 function slideW(){var t=document.getElementById("ptrack");return t?t.clientWidth:0;}
@@ -1446,7 +1482,8 @@ function renderProjects(){
     var pstats=g(p,"stats"),psoc=g(p,"soc"),ptl=g(p,"tl"),per=g(p,"er");
     var stats=pstats.map(function(s){return "<div><b>"+s[0]+"</b><span>"+s[1]+"</span></div>";}).join("");
     var soc=psoc.length?'<div class="psoc">'+psoc.map(function(s,i){var u=(LINKS[p.k]||[])[i];return u?'<a href="'+u+'" target="_blank" rel="noopener">'+s[0]+" <b>"+s[1]+"</b> ↗</a>":"<span>"+s[0]+" <b>"+s[1]+"</b></span>";}).join("")+"</div>":"";
-    var tl=ptl?'<div class="tlabel">'+(lang==="en"?"Selected 2026 trips":"Выезды 2026: избранное")+'</div><div class="timeline">'+ptl.map(function(t){return "<div><i>"+t[0]+"</i><span>"+t[1]+"</span><em>"+t[2]+"</em></div>";}).join("")+"</div>":"";
+    var rent=RENT[p.k]?'<a class="prent rv" href="'+RENT[p.k]+'" target="_blank" rel="noopener"><span>'+(lang==="en"?"Corporate and private events":"Корпоративы и закрытые события")+'</span><b>'+(lang==="en"?"Learn more":"Узнать подробности")+" ↗</b></a>":"";
+     var tl=ptl?'<div class="tlabel">'+(lang==="en"?"Selected 2026 trips":"Выезды 2026: избранное")+'</div><div class="timeline">'+ptl.map(function(t){return "<div><i>"+t[0]+"</i><span>"+t[1]+"</span><em>"+t[2]+"</em></div>";}).join("")+"</div>":"";
     var er="";
     if(per){var rows=p.er.rows,mx=Math.max.apply(null,rows.map(function(r){return r[1];}));
       er='<div class="er"><h4>'+per.title+"</h4>"+rows.map(function(r,k){var nm=lang==="en"?per.names[k]:r[0];return '<div class="erow'+(k===0?" me":"")+'"><span>'+nm+'</span><div class="bar"><i style="--w:'+(r[1]/mx*100).toFixed(0)+'%;transition-delay:'+(k*.08)+'s"></i></div><b>'+String(r[1]).replace(".",UI[lang].dec)+"</b></div>";}).join("")+"<small>"+per.note+"</small></div>";}
@@ -1460,7 +1497,7 @@ function renderProjects(){
     html+='<section class="proj" id="p-'+p.k+'" style="--ac:'+p.ac+";--act:"+p.act+'"><div class="wrap"><div class="pgrid">'+
       '<div class="pinfo"><div class="pnum rv"><img src="'+LOGO[p.logo]+'" alt=""><span>'+n+" / 08 · "+g(p,"place")+'</span></div>'+
       '<h2 class="rv">'+g(p,"name")+'</h2><div class="cat rv">'+g(p,"cat")+'</div><p class="tag rv">'+g(p,"tag")+'</p><p class="desc rv">'+g(p,"desc")+'</p>'+
-      '<div class="pstats rv">'+stats+"</div>"+soc+tl+"</div>"+
+      '<div class="pstats rv">'+stats+"</div>"+soc+rent+tl+"</div>"+
       '<div class="pmedia">'+ph+"</div></div></div></section>";
   });
   var again=host.children.length>0;
